@@ -22,6 +22,7 @@ class _FaceFingerPrintAuthState extends State<FaceFingerPrintAuth> {
         })
     );
   }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey,

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'local_authentication.dart'; // Import the new file
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,20 +13,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text('HOME PAGE'),
+        title: const Text('HOME PAGE'),
         centerTitle: true,
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           fontSize: 17,
           color: Colors.black,
         ),
@@ -34,14 +38,14 @@ class HomeScreen extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => FaceFingerPrintAuth()),
+              MaterialPageRoute(builder: (context) => const FaceFingerPrintAuth()),
             );
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.green.shade100,
             foregroundColor: Colors.black,
           ),
-          child: Text(
+          child: const Text(
             'AUTHENTICATION',
             style: TextStyle(
               fontWeight: FontWeight.bold,
