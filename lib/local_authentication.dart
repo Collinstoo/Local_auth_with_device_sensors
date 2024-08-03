@@ -63,7 +63,7 @@ class _FaceFingerPrintAuthState extends State<FaceFingerPrintAuth> {
         localizedReason: 'local authentication',
         options: const AuthenticationOptions(
           stickyAuth: true,
-          //if you have chosen biometricOnly to true it is not show other option to authenticate
+          //if you have chosen biometricOnly to true it does not show other option to authenticate
           biometricOnly: true,
         ),
       );
